@@ -59,7 +59,7 @@ data$y_pfs <- Surv(data$Survival.time,data$Status)
 
 ### Original
 
-![](C:/Users/victornavarro/OneDrive/OneDrive - VHIO/Escritorio/VHIO/Guillermo VIllacampa/post-CDK/corves/ESR1/1_EMERALD.png)
+![](./ESR1/1_EMERALD.png)
 
 
 ### Constructed
@@ -124,7 +124,7 @@ ggsurvplot(surv1 , data = data[data$Trial == "EMERALD",],
 
 ### Original
 
-![](C:/Users/victornavarro/OneDrive/OneDrive - VHIO/Escritorio/VHIO/Guillermo VIllacampa/post-CDK/corves/ESR1/2_Accelera.png)
+![](./ESR1/2_Accelera.png)
 
 
 ### Constructed
@@ -189,7 +189,7 @@ ggsurvplot(surv1 , data = data[data$Trial == "Accelera",],
 
 ### Original
 
-![](C:/Users/victornavarro/OneDrive/OneDrive - VHIO/Escritorio/VHIO/Guillermo VIllacampa/post-CDK/corves/ESR1/3_Ameera3.png)
+![](./ESR1/3_Ameera3.png)
 
 
 ### Constructed
@@ -255,7 +255,7 @@ ggsurvplot(surv1 , data = data[data$Trial == "Ameera3",],
 
 ### Original
 
-![](C:/Users/victornavarro/OneDrive/OneDrive - VHIO/Escritorio/VHIO/Guillermo VIllacampa/post-CDK/corves/ESR1/4_Serena2.png)
+![](./ESR1/4_Serena2.png)
 
 
 ### Constructed
@@ -322,7 +322,7 @@ ggsurvplot(surv1 , data = data[data$Trial == "Serena2",],
 
 ### Original
 
-![](C:/Users/victornavarro/OneDrive/OneDrive - VHIO/Escritorio/VHIO/Guillermo VIllacampa/post-CDK/corves/ESR1/5_Ember_3.png)
+![](./ESR1/5_Ember_3.png)
 
 
 ### Constructed
@@ -387,7 +387,7 @@ ggsurvplot(surv1 , data = data[data$Trial == "EMBER3",],
 
 ### Original
 
-![](C:/Users/victornavarro/OneDrive/OneDrive - VHIO/Escritorio/VHIO/Guillermo VIllacampa/post-CDK/corves/ESR1/6_PACE.png)
+![](./ESR1/6_PACE.png)
 
 
 ### Constructed
@@ -454,7 +454,7 @@ ggsurvplot(surv1 , data = data[data$Trial == "PACE",],
 
 ### Original
 
-![](C:/Users/victornavarro/OneDrive/OneDrive - VHIO/Escritorio/VHIO/Guillermo VIllacampa/post-CDK/corves/ESR1/7_MAINTAIN.png)
+![](./ESR1/7_MAINTAIN.png)
 
 
 ### Constructed
@@ -546,7 +546,7 @@ data$y_pfs <- Surv(data$Survival.time,data$Status)
 
 ### Original
 
-![](C:/Users/victornavarro/OneDrive/OneDrive - VHIO/Escritorio/VHIO/Guillermo VIllacampa/post-CDK/corves/PI3K/1_Capitello291.png)
+![](./PI3K/1_Capitello291.png)
 
 
 ### Constructed
@@ -611,7 +611,7 @@ ggsurvplot(surv1 , data = data[data$Trial == "Capitello291",],
 
 ### Original
 
-![](C:/Users/victornavarro/OneDrive/OneDrive - VHIO/Escritorio/VHIO/Guillermo VIllacampa/post-CDK/corves/PI3K/2_Finer.png)
+![](./PI3K/2_Finer.png)
 
 
 ### Constructed
@@ -676,7 +676,7 @@ ggsurvplot(surv1 , data = data[data$Trial == "Finner",],
 
 ### Original
 
-![](C:/Users/victornavarro/OneDrive/OneDrive - VHIO/Escritorio/VHIO/Guillermo VIllacampa/post-CDK/corves/PI3K/3_PACE.png)
+![](./PI3K/3_PACE.png)
 
 
 ### Constructed
@@ -740,7 +740,7 @@ ggsurvplot(surv1 , data = data[data$Trial == "PACE",],
 
 ### Original
 
-![](C:/Users/victornavarro/OneDrive/OneDrive - VHIO/Escritorio/VHIO/Guillermo VIllacampa/post-CDK/corves/PI3K/4_MANTAIN.png)
+![](./PI3K/4_MANTAIN.png)
 
 
 ### Constructed
@@ -805,7 +805,7 @@ ggsurvplot(surv1 , data = data[data$Trial == "MAINTAIN",],
 
 ### Original
 
-![](C:/Users/victornavarro/OneDrive/OneDrive - VHIO/Escritorio/VHIO/Guillermo VIllacampa/post-CDK/corves/PI3K/5_EMBER_3.png)
+![](./PI3K/5_EMBER_3.png)
 
 
 ### Constructed
