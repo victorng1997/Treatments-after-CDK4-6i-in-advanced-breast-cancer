@@ -59,7 +59,7 @@ data$y_pfs <- Surv(data$Survival.time,data$Status)
 
 ### Original
 
-![](./ESR1/1_EMERALD.png)
+![](C:/Users/victornavarro/OneDrive/OneDrive - VHIO/Escritorio/VHIO/Guillermo VIllacampa/post-CDK/corves/ESR1/1_EMERALD.png)
 
 
 ### Constructed
@@ -124,7 +124,7 @@ ggsurvplot(surv1 , data = data[data$Trial == "EMERALD",],
 
 ### Original
 
-![](./ESR1/2_Accelera.png)
+![](C:/Users/victornavarro/OneDrive/OneDrive - VHIO/Escritorio/VHIO/Guillermo VIllacampa/post-CDK/corves/ESR1/2_Accelera.png)
 
 
 ### Constructed
@@ -189,7 +189,7 @@ ggsurvplot(surv1 , data = data[data$Trial == "Accelera",],
 
 ### Original
 
-![](./ESR1/3_Ameera3.png)
+![](C:/Users/victornavarro/OneDrive/OneDrive - VHIO/Escritorio/VHIO/Guillermo VIllacampa/post-CDK/corves/ESR1/3_Ameera3.png)
 
 
 ### Constructed
@@ -255,7 +255,7 @@ ggsurvplot(surv1 , data = data[data$Trial == "Ameera3",],
 
 ### Original
 
-![](./ESR1/4_Serena2.png)
+![](C:/Users/victornavarro/OneDrive/OneDrive - VHIO/Escritorio/VHIO/Guillermo VIllacampa/post-CDK/corves/ESR1/4_Serena2.png)
 
 
 ### Constructed
@@ -322,7 +322,7 @@ ggsurvplot(surv1 , data = data[data$Trial == "Serena2",],
 
 ### Original
 
-![](./ESR1/5_Ember_3.png)
+![](C:/Users/victornavarro/OneDrive/OneDrive - VHIO/Escritorio/VHIO/Guillermo VIllacampa/post-CDK/corves/ESR1/5_Ember_3.png)
 
 
 ### Constructed
@@ -387,7 +387,7 @@ ggsurvplot(surv1 , data = data[data$Trial == "EMBER3",],
 
 ### Original
 
-![](./ESR1/6_PACE.png)
+![](C:/Users/victornavarro/OneDrive/OneDrive - VHIO/Escritorio/VHIO/Guillermo VIllacampa/post-CDK/corves/ESR1/6_PACE.png)
 
 
 ### Constructed
@@ -454,7 +454,7 @@ ggsurvplot(surv1 , data = data[data$Trial == "PACE",],
 
 ### Original
 
-![](./ESR1/7_MAINTAIN.png)
+![](C:/Users/victornavarro/OneDrive/OneDrive - VHIO/Escritorio/VHIO/Guillermo VIllacampa/post-CDK/corves/ESR1/7_MAINTAIN.png)
 
 
 ### Constructed
@@ -511,6 +511,72 @@ ggsurvplot(surv1 , data = data[data$Trial == "MAINTAIN",],
 
 ```
 
+\newpage
+
+## evERA
+
+
+
+
+### Original
+
+![](C:/Users/victornavarro/OneDrive/OneDrive - VHIO/Escritorio/VHIO/Guillermo VIllacampa/post-CDK/corves/ESR1/8_evERA.png)
+
+
+### Constructed
+
+
+
+
+
+```{r echo=FALSE, fig.height=8, fig.width=14, message=FALSE, warning=FALSE}
+
+
+surv1 <- survfit(y_pfs~Group,data=data[data$Trial == "evERA",])
+
+t1 <- tbl_survfit(surv1,times=c(6,12,24),label_header = "**{time} Months**",estimate_fun = function(x) sprintf("%.1f%%", x * 100))
+t2 <- tbl_survfit(surv1,probs=0.5,label_header = "**Median (months 95%CI)**" ,estimate_fun = function(x) sprintf("%.2f", x))
+t3 <- coxph(y_pfs~Group,data=data[data$Trial == "evERA",]) %>%
+  tbl_regression(exponentiate = TRUE,pvalue_fun = label_style_pvalue(digits=3))
+tbl_merge(list(t1,t2,t3), tab_spanner = FALSE)
+
+mypal <- pal_jco("default")(10)[c(1,2,3,4,5,6,7,8)]
+
+ggsurvplot(surv1 , data = data[data$Trial == "evERA",],
+           title = " ",
+           pval = T, pval.method = F,    # Add p-value &  method name
+           palette = mypal,
+           risk.table = T,                  # Add No at risk table
+           cumevents = F,                   # Add cumulative No of events table
+           tables.height = 0.15,               # Specify tables height
+           tables.theme = theme_cleantable(),  # Clean theme for tables
+           tables.y.text = F,
+           conf.int = F, # Hide tables y axis text
+           xlab= "Time (months)",
+           ylab="Progression-free Survival",
+           pval.size=4.5,
+           risk.table.title="N. at risk",
+           risk.table.fontsize=5.5,
+           font.y=c(22),
+           font.tickslab=20,
+           size=2,
+           font.x=c(20),
+           linetype=c(1,1,1,1,1,1,1,1,1),
+           censor.size=6,
+           # legend=c(0.8,1),           # Change legend titles
+           # legend.labs = nam,  # Change legend labels
+           # legend.title="",
+           # font.legend=c(14,"bold"),
+           break.time.by=3,
+          surv.median.line="hv",
+          xlim=c(0,30))
+
+
+
+
+
+```
+
 
 ```{r include=FALSE}
 
@@ -546,7 +612,7 @@ data$y_pfs <- Surv(data$Survival.time,data$Status)
 
 ### Original
 
-![](./PI3K/1_Capitello291.png)
+![](C:/Users/victornavarro/OneDrive/OneDrive - VHIO/Escritorio/VHIO/Guillermo VIllacampa/post-CDK/corves/PI3K/1_Capitello291.png)
 
 
 ### Constructed
@@ -611,7 +677,7 @@ ggsurvplot(surv1 , data = data[data$Trial == "Capitello291",],
 
 ### Original
 
-![](./PI3K/2_Finer.png)
+![](C:/Users/victornavarro/OneDrive/OneDrive - VHIO/Escritorio/VHIO/Guillermo VIllacampa/post-CDK/corves/PI3K/2_Finer.png)
 
 
 ### Constructed
@@ -676,7 +742,7 @@ ggsurvplot(surv1 , data = data[data$Trial == "Finner",],
 
 ### Original
 
-![](./PI3K/3_PACE.png)
+![](C:/Users/victornavarro/OneDrive/OneDrive - VHIO/Escritorio/VHIO/Guillermo VIllacampa/post-CDK/corves/PI3K/3_PACE.png)
 
 
 ### Constructed
@@ -740,7 +806,7 @@ ggsurvplot(surv1 , data = data[data$Trial == "PACE",],
 
 ### Original
 
-![](./PI3K/4_MANTAIN.png)
+![](C:/Users/victornavarro/OneDrive/OneDrive - VHIO/Escritorio/VHIO/Guillermo VIllacampa/post-CDK/corves/PI3K/4_MANTAIN.png)
 
 
 ### Constructed
@@ -805,7 +871,7 @@ ggsurvplot(surv1 , data = data[data$Trial == "MAINTAIN",],
 
 ### Original
 
-![](./PI3K/5_EMBER_3.png)
+![](C:/Users/victornavarro/OneDrive/OneDrive - VHIO/Escritorio/VHIO/Guillermo VIllacampa/post-CDK/corves/PI3K/5_EMBER_3.png)
 
 
 ### Constructed
